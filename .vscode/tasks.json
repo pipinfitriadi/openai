@@ -13,11 +13,23 @@
             "args": ["-m", "pip", "install", "--upgrade", "pip"]
         },
         {
+            "label": "Python: Install dependency",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "-m", "pip", "install",
+                "flake8",
+                "-r",
+                "requirements.txt"
+            ]
+        },
+        {
             "label": "Python: Initial setup",
             "dependsOrder": "sequence",
             "dependsOn": [
                 "Python: Create VEnv",
-                "Python: Upgrade PIP"
+                "Python: Upgrade PIP",
+                "Python: Install dependency"
             ],
             "type": "shell",
             "command": "echo Finished initial setup for python"

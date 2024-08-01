@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Python: Create VEnv",
+            "type": "shell",
+            "command": "if [ ! -d venv/ ]; then python -m venv venv/; fi"
+        },
+        {
+            "label": "Python: Upgrade PIP",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": ["-m", "pip", "install", "--upgrade", "pip"]
+        },
+        {
+            "label": "Python: Initial setup",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Python: Create VEnv",
+                "Python: Upgrade PIP"
+            ],
+            "type": "shell",
+            "command": "echo Finished initial setup for python"
+        }
+    ]
+}

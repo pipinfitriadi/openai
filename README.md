@@ -12,7 +12,7 @@ Learning repo for OpenAI API based on [docs](https://platform.openai.com/docs/ov
 
 ## Setup
 
-Process this steps at first time in your VS Code:
+Process this steps at first time in your VS Code after clone this repo:
 
 1. Type `[command]` + `[shift]` + `[P]` >> `Tasks: Run Task` >> `Python: Create VEnv`
 2. Type `[command]` + `[shift]` + `[P]` >> `Python: Select Interpreter` >> `./venv/bin/python`
